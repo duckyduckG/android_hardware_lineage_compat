@@ -360,6 +360,17 @@ cc_library {
 }
 
 cc_library {
+    name: "libion_shim",
+    srcs: ["libionshim/libionshim.cpp"],
+    shared_libs: [
+        "liblog",
+        "libion",
+    ],
+    vendor: true,
+    compile_multilib: "both",
+}
+
+cc_library {
     name: "libjsoncpp_shim",
     srcs: [
         "libjsoncpp/json_value.cpp",
